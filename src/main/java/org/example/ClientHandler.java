@@ -47,23 +47,11 @@ public class ClientHandler implements Runnable {
                     String messageType = parts[0];
                     String messageContent = parts.length > 1 ? parts[1] : "";
 
-                    switch (messageType) {
-                        case "GET_USERS":
-                            sendUserList();
-                            break;
-                        case "PRIVATE":
-                            handlePrivateMessage(messageContent);
-                            break;
-                        case "BROADCAST":
-                            ChatServer.broadcastMessage(nickname, messageContent);
-                            break;
-                        default:
-                            logger.warn("Неизвестный тип сообщения: " + messageType);
-                    }
+                    // Разделим обработку по типам сообщений
+                    handleMessage(messageType, messageContent);
                 }
             }
         } catch (IOException e) {
-            e.printStackTrace();
             logger.error("Ошибка при обработке сообщений: ", e);
         } finally {
             if (!isPreConnected) {
@@ -71,11 +59,27 @@ public class ClientHandler implements Runnable {
                     socket.close();
                     logger.info("Соединение с пользователем " + nickname + " закрыто.");
                 } catch (IOException e) {
-                    e.printStackTrace();
                     logger.error("Ошибка при закрытии соединения: ", e);
                 }
                 ChatServer.getClientHandlers().remove(nickname);
             }
+        }
+    }
+
+    // Обработка сообщений
+    private void handleMessage(String messageType, String messageContent) {
+        switch (messageType) {
+            case "GET_USERS":
+                sendUserList();
+                break;
+            case "PRIVATE":
+                handlePrivateMessage(messageContent);
+                break;
+            case "BROADCAST":
+                handleBroadcastMessage(messageContent);
+                break;
+            default:
+                logger.warn("Неизвестный тип сообщения: " + messageType);
         }
     }
 
@@ -85,6 +89,7 @@ public class ClientHandler implements Runnable {
         logger.info("Отправлен список пользователей: " + users);
     }
 
+    // Метод для обработки личных сообщений
     private void handlePrivateMessage(String messageContent) {
         String[] parts = messageContent.split(":", 2);
         if (parts.length == 2) {
@@ -92,6 +97,12 @@ public class ClientHandler implements Runnable {
             String content = parts[1];
             sendPrivateMessage(recipient, content);
         }
+    }
+
+    // Метод для обработки сообщений, которые отправляются всем пользователям
+    private void handleBroadcastMessage(String messageContent) {
+        ChatServer.broadcastMessage(nickname, messageContent);
+        logger.info("Отправлено сообщение всем пользователям от " + nickname + ": " + messageContent);
     }
 
     private void sendPrivateMessage(String recipientName, String message) {

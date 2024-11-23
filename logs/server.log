@@ -1,9 +1,10 @@
-2024-11-22 22:12:31 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 22:33:10 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 22:33:32 - INFO - org.example.ClientHandler - Пользователь подключился: olesya
-2024-11-22 22:33:47 - INFO - org.example.ClientHandler - Получено от olesya: PRIVATE илюша: привет
-2024-11-22 22:34:00 - INFO - org.example.ClientHandler - Получено от olesya: BROADCAST: аааыдда
-2024-11-22 22:34:08 - ERROR - org.example.ClientHandler - Ошибка с клиентом olesya
+2024-11-23 18:45:09 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: null
+2024-11-23 18:45:09 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: null
+2024-11-23 18:45:09 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: null
+2024-11-23 18:45:09 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: null
+2024-11-23 18:45:09 - INFO - org.example.ClientHandler - Новый пользователь подключен: null
+2024-11-23 18:45:09 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, null, Анна, Алина]
+2024-11-23 18:45:09 - ERROR - org.example.ClientHandler - Ошибка при обработке сообщений: 
 java.net.SocketException: Connection reset
 	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
 	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
@@ -18,397 +19,46 @@ java.net.SocketException: Connection reset
 	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:370)
 	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:347)
 	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:436)
-	at org.example.ClientHandler.run(ClientHandler.java:34)
+	at org.example.ClientHandler.run(ClientHandler.java:45)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-11-22 22:38:22 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 22:38:36 - INFO - org.example.ClientHandler - Пользователь подключился: олеся
-2024-11-22 22:38:45 - INFO - org.example.ClientHandler - Получено от олеся: PRIVATE а: орил
-2024-11-22 22:43:41 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 22:44:01 - INFO - org.example.ChatServer - Пользователь олеся подключился
-2024-11-22 22:44:01 - INFO - org.example.ChatServer - Широковещательное сообщение от олеся: олеся присоединился к чату.
-2024-11-22 22:45:16 - INFO - org.example.ChatServer - Широковещательное сообщение от олеся: олеся покинул чат.
-2024-11-22 22:45:16 - INFO - org.example.ChatServer - Пользователь олеся покинул чат
-2024-11-22 22:45:24 - INFO - org.example.ChatServer - Пользователь олеся подключился
-2024-11-22 22:45:24 - INFO - org.example.ChatServer - Широковещательное сообщение от олеся: олеся присоединился к чату.
-2024-11-22 22:46:36 - INFO - org.example.ChatServer - Широковещательное сообщение от олеся: олеся покинул чат.
-2024-11-22 22:46:36 - INFO - org.example.ChatServer - Пользователь олеся покинул чат
-2024-11-22 22:48:08 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 22:48:21 - INFO - org.example.ChatServer - Пользователь а подключился
-2024-11-22 22:48:21 - INFO - org.example.ChatServer - Широковещательное сообщение от а: а присоединился к чату.
-2024-11-22 22:49:26 - INFO - org.example.ChatServer - Широковещательное сообщение от а: а покинул чат.
-2024-11-22 22:49:26 - INFO - org.example.ChatServer - Пользователь а покинул чат
-2024-11-22 22:50:00 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 22:50:08 - INFO - org.example.ChatServer - Пользователь а подключился
-2024-11-22 22:50:08 - INFO - org.example.ChatServer - Широковещательное сообщение от а: а присоединился к чату.
-2024-11-22 22:50:41 - INFO - org.example.ChatServer - Широковещательное сообщение от а: а покинул чат.
-2024-11-22 22:50:41 - INFO - org.example.ChatServer - Пользователь а покинул чат
-2024-11-22 22:50:45 - INFO - org.example.ChatServer - Пользователь sf подключился
-2024-11-22 22:50:45 - INFO - org.example.ChatServer - Широковещательное сообщение от sf: sf присоединился к чату.
-2024-11-22 22:50:50 - INFO - org.example.ChatServer - Широковещательное сообщение от sf: dge
-2024-11-22 22:51:27 - INFO - org.example.ChatServer - Широковещательное сообщение от sf: sf покинул чат.
-2024-11-22 22:51:27 - INFO - org.example.ChatServer - Пользователь sf покинул чат
-2024-11-22 22:51:32 - INFO - org.example.ChatServer - Пользователь а подключился
-2024-11-22 22:51:32 - INFO - org.example.ChatServer - Широковещательное сообщение от а: а присоединился к чату.
-2024-11-22 22:51:46 - INFO - org.example.ChatServer - Широковещательное сообщение от а: а покинул чат.
-2024-11-22 22:51:46 - INFO - org.example.ChatServer - Пользователь а покинул чат
-2024-11-22 23:03:08 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 23:08:59 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 23:09:12 - INFO - org.example.ClientHandler - Пользователь подключился: а
-2024-11-22 23:09:21 - INFO - org.example.ClientHandler - Получено от а: PRIVATE выа: якмп
-2024-11-22 23:09:24 - ERROR - org.example.ClientHandler - Ошибка с клиентом а
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
-	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329)
-	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372)
-	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215)
-	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169)
-	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
-	at java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
-	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:370)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:347)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:436)
-	at org.example.ClientHandler.run(ClientHandler.java:34)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-11-22 23:15:15 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 23:15:32 - INFO - org.example.ClientHandler - Пользователь подключился: ыаы
-2024-11-22 23:15:35 - INFO - org.example.ClientHandler - Получено от ыаы: LIST
-2024-11-22 23:15:35 - INFO - org.example.ClientHandler - Неизвестное сообщение: LIST
-2024-11-22 23:15:45 - INFO - org.example.ClientHandler - Получено от ыаы: PRIVATE а: ЮОЛВ
-2024-11-22 23:15:53 - INFO - org.example.ClientHandler - Получено от ыаы: BROADCAST: ываыва
-2024-11-22 23:18:54 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 23:19:06 - INFO - org.example.ClientHandler - Пользователь подключился: ыв
-2024-11-22 23:19:18 - INFO - org.example.ClientHandler - Получено от ыв: PRIVATE лОВ: Тса
-2024-11-22 23:20:11 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 23:20:23 - INFO - org.example.ClientHandler - Пользователь подключился: р
-2024-11-22 23:20:30 - INFO - org.example.ClientHandler - Получено от р: PRIVATE кые: впвп
-2024-11-22 23:20:35 - INFO - org.example.ClientHandler - Получено от р: BROADCAST: впвп
-2024-11-22 23:20:38 - ERROR - org.example.ClientHandler - Ошибка с клиентом р
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
-	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329)
-	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372)
-	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215)
-	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169)
-	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
-	at java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
-	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:370)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:347)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:436)
-	at org.example.ClientHandler.run(ClientHandler.java:34)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-11-22 23:23:18 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 23:23:25 - INFO - org.example.ClientHandler - Пользователь подключился: ВИ
-2024-11-22 23:23:38 - INFO - org.example.ClientHandler - Получено от ВИ: PRIVATE ЛОУТП: ФУП
-2024-11-22 23:23:42 - ERROR - org.example.ClientHandler - Ошибка с клиентом ВИ
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
-	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329)
-	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372)
-	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215)
-	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169)
-	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
-	at java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
-	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:370)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:347)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:436)
-	at org.example.ClientHandler.run(ClientHandler.java:38)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-11-22 23:26:28 - INFO - org.example.ChatServer - Сервер запущен на порту 12345
-2024-11-22 23:26:39 - INFO - org.example.ClientHandler - Пользователь подключился: ор
-2024-11-22 23:26:45 - ERROR - org.example.ClientHandler - Ошибка с клиентом ор
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
-	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
-	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
-	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
-	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329)
-	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372)
-	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215)
-	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169)
-	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
-	at java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
-	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:370)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:347)
-	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:436)
-	at org.example.ClientHandler.run(ClientHandler.java:38)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2024-11-22 23:33:54 - INFO - org.example.ClientHandler - Новый пользователь подключен: ааа
-2024-11-22 23:33:59 - INFO - org.example.ClientHandler - Отправлен список пользователей: [ааа]
-2024-11-22 23:34:13 - WARN - org.example.ClientHandler - Пользователь ута не найден.
-2024-11-22 23:36:06 - INFO - org.example.ClientHandler - Новый пользователь подключен: ри
-2024-11-22 23:36:11 - INFO - org.example.ClientHandler - Отправлен список пользователей: [ри]
-2024-11-22 23:36:19 - WARN - org.example.ClientHandler - Пользователь щдт не найден.
-2024-11-22 23:36:48 - INFO - org.example.ClientHandler - Соединение с пользователем ри закрыто.
-2024-11-22 23:37:44 - INFO - org.example.ClientHandler - Новый пользователь подключен: null
-2024-11-22 23:37:58 - INFO - org.example.ClientHandler - Отправлен список пользователей: [null]
-2024-11-22 23:38:05 - INFO - org.example.ClientHandler - Соединение с пользователем null закрыто.
-2024-11-22 23:38:26 - INFO - org.example.ClientHandler - Новый пользователь подключен: ри
-2024-11-22 23:38:35 - INFO - org.example.ClientHandler - Отправлен список пользователей: [ри]
-2024-11-22 23:38:47 - WARN - org.example.ClientHandler - Пользователь ааа не найден.
-2024-11-22 23:55:39 - INFO - org.example.ClientHandler - Новый пользователь подключен: р
-2024-11-22 23:55:44 - INFO - org.example.ClientHandler - Отправлен список пользователей: [р]
-2024-11-22 23:55:50 - WARN - org.example.ClientHandler - Пользователь дмш не найден.
-2024-11-22 23:56:04 - INFO - org.example.ClientHandler - Соединение с пользователем р закрыто.
-2024-11-23 00:00:39 - INFO - org.example.ClientHandler - Новый пользователь подключен: а
-2024-11-23 00:00:47 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Charlie, Alice, а, Bob]
-2024-11-23 00:01:25 - INFO - org.example.ClientHandler - Соединение с пользователем а закрыто.
-2024-11-23 00:07:20 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 00:07:25 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Олеся (вы)]
-2024-11-23 00:07:36 - WARN - org.example.ClientHandler - Пользователь а не найден.
-2024-11-23 00:07:42 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 00:09:41 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 00:09:45 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Анна, Алиса , Олеся, Таисия]
-2024-11-23 00:10:06 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Анна, Алиса , Олеся, Таисия]
-2024-11-23 00:10:27 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 00:13:13 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 00:13:17 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Charlie, Alice, Олеся (вы), Bob]
-2024-11-23 00:13:53 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 00:16:34 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 00:16:38 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Анна,  Алиса, Олеся (вы), Таисия]
-2024-11-23 00:17:02 - WARN - org.example.ClientHandler - Пользователь Алиса не найден.
-2024-11-23 00:17:17 - INFO - org.example.ClientHandler - Пользователь Олеся отправил сообщение всем пользователям (Анна,  Алиса, Таисия): :аа
-2024-11-23 00:17:20 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Анна,  Алиса, Олеся (вы), Таисия]
-2024-11-23 00:17:27 - INFO - org.example.ClientHandler - Пользователь Олеся отправил личное сообщение пользователю Олеся: аа
-2024-11-23 00:17:38 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Анна,  Алиса, Олеся (вы), Таисия]
-2024-11-23 00:17:48 - WARN - org.example.ClientHandler - Пользователь 2 не найден.
-2024-11-23 00:18:40 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 00:18:43 - INFO - org.example.ClientHandler - Отправлен список пользователей: [ Анна,  Алиса , Олеся,  Таисия]
-2024-11-23 00:18:50 - WARN - org.example.ClientHandler - Пользователь Анна не найден.
-2024-11-23 00:19:05 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 00:19:53 - INFO - org.example.ClientHandler - Новый пользователь подключен: оо
-2024-11-23 00:19:56 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Charlie, Alice, оо, Bob]
-2024-11-23 00:20:52 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 00:20:55 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, Олеся, Алиса]
-2024-11-23 00:21:10 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 00:23:44 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 00:23:47 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, Олеся, Алиса]
-2024-11-23 00:24:08 - INFO - org.example.ClientHandler - Пользователь Олеся отправил сообщение всем пользователям (Алина, Анна, Алиса): :бббб
-2024-11-23 00:24:21 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 14:39:40 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 14:39:43 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, олеся, Алиса]
-2024-11-23 14:40:04 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, олеся, Алиса]
-2024-11-23 14:42:45 - INFO - org.example.ClientHandler - Новый пользователь подключен: олес
-2024-11-23 14:42:48 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, олес, Алиса]
-2024-11-23 14:43:12 - INFO - org.example.ClientHandler - Отправлено сообщение всем пользователям от олес: :привет!!
-2024-11-23 14:44:40 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 14:44:43 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, олеся, Алиса]
-2024-11-23 14:45:01 - INFO - org.example.ClientHandler - Отправлено сообщение всем пользователям от олеся: :привет!!
-2024-11-23 14:50:39 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 14:50:39 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, Олеся, Алиса]
-2024-11-23 14:50:55 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, Олеся, Алиса]
-2024-11-23 14:51:17 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 14:56:10 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 14:56:38 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
-2024-11-23 14:56:47 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
-2024-11-23 14:57:07 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, Алиса, Олеся]
-2024-11-23 14:57:44 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
-2024-11-23 14:57:50 - INFO - org.example.ClientHandler - Новый пользователь подключен: Анна
-2024-11-23 14:57:54 - INFO - org.example.ClientHandler - Соединение с пользователем Анна закрыто.
-2024-11-23 14:58:03 - INFO - org.example.ClientHandler - Новый пользователь подключен: Катя
-2024-11-23 14:58:07 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, Алиса, Катя]
-2024-11-23 15:00:50 - INFO - org.example.ClientHandler - Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 15:00:55 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, ОЛЕСЯ, Алиса]
-2024-11-23 15:01:26 - INFO - org.example.ClientHandler - Отправлено сообщение всем пользователям от ОЛЕСЯ: привет все
-2024-11-23 15:16:09 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 15:16:13 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, олеся, Алиса]
-2024-11-23 15:16:26 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю олеся: привет
-2024-11-23 15:16:33 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, олеся, Алиса]
-2024-11-23 15:17:01 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алина, Анна, олеся, Алиса]
-2024-11-23 15:17:12 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
-2024-11-23 15:17:17 - INFO - org.example.ClientHandler - Новый пользователь подключен: алина
-2024-11-23 15:17:36 - WARN - org.example.ClientHandler - Пользователь олеся не найден.
-2024-11-23 15:17:51 - INFO - org.example.ClientHandler - Соединение с пользователем алина закрыто.
-2024-11-23 15:22:37 - INFO - org.example.ChatServer - Новый пользователь подключен: олеся
-2024-11-23 15:22:37 - INFO - org.example.ChatServer - Отправлен список пользователей: [Анна, Алиса, Алина, олеся]
-2024-11-23 15:23:16 - INFO - org.example.ChatServer - Отправлено личное сообщение пользователю олеся: привет олеся
-2024-11-23 15:25:00 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:25:00 - INFO - org.example.ChatServer - Новый пользователь подключен: олеся
-2024-11-23 15:25:00 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:25:18 - WARN - org.example.ChatServer - Пользователь Алиса не найден или не в сети.
-2024-11-23 15:26:30 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:26:30 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:26:30 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:26:30 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: Олеся
-2024-11-23 15:26:30 - INFO - org.example.ChatServer - Новый пользователь подключен: Олеся
-2024-11-23 15:26:30 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
-2024-11-23 15:26:54 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: PRIVATE:Олеся:привет алиса
-2024-11-23 15:26:54 - INFO - org.example.ChatServer - Отправлено личное сообщение пользователю Алиса от Олеся: привет алиса
-2024-11-23 15:27:20 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:Олеся:привет анна алиса и алина
-2024-11-23 15:27:20 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:Олеся:привет анна алиса и алина
-2024-11-23 15:27:20 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:Олеся:привет анна алиса и алина
-2024-11-23 15:27:20 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от Олеся: привет анна алиса и алина
-2024-11-23 15:29:04 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
-2024-11-23 15:31:00 - INFO - org.example.ChatServer - Соединение с пользователем Олеся закрыто.
-2024-11-23 15:32:22 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:32:22 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:32:22 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:32:22 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: Олеся
-2024-11-23 15:32:22 - INFO - org.example.ChatServer - Новый пользователь подключен: Олеся
-2024-11-23 15:32:22 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
-2024-11-23 15:33:43 - INFO - org.example.ChatServer - Соединение с пользователем Олеся закрыто.
-2024-11-23 15:35:03 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:35:03 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:35:03 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
-2024-11-23 15:35:03 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: Олеся
-2024-11-23 15:35:03 - INFO - org.example.ChatServer - Новый пользователь подключен: Олеся
-2024-11-23 15:35:03 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
-2024-11-23 15:35:20 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
-2024-11-23 15:35:43 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: PRIVATE:Олеся:привет алиса
-2024-11-23 15:35:43 - INFO - org.example.ChatServer - Отправлено личное сообщение пользователю Алиса от Олеся: привет алиса
-2024-11-23 15:35:52 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:Олеся:привет все
-2024-11-23 15:35:52 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:Олеся:привет все
-2024-11-23 15:35:52 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:Олеся:привет все
-2024-11-23 15:35:52 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от Олеся: привет все
-2024-11-23 15:37:05 - INFO - org.example.ChatServer - Соединение с пользователем Олеся закрыто.
-2024-11-23 15:38:51 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:38:51 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:38:51 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:38:51 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:38:51 - INFO - org.example.ChatServer - Новый пользователь подключен: олеся
-2024-11-23 15:38:57 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:39:24 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:олеся:привет аня
-2024-11-23 15:39:24 - INFO - org.example.ChatServer - Отправлено личное сообщение пользователю Анна от олеся: привет аня
-2024-11-23 15:39:30 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:39:41 - WARN - org.example.ChatServer - Пользователь анна не найден.
-2024-11-23 15:40:39 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:40:39 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:40:39 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:40:39 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:40:39 - INFO - org.example.ChatServer - Новый пользователь подключен: олеся
-2024-11-23 15:40:39 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:40:44 - INFO - org.example.ChatServer - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:41:13 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:олеся:привет аня
-2024-11-23 15:41:13 - INFO - org.example.ChatServer - Отправлено личное сообщение пользователю Анна от олеся: привет аня
-2024-11-23 15:41:45 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:олеся:привет все
-2024-11-23 15:41:45 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:олеся:привет все
-2024-11-23 15:41:45 - INFO - org.example.ChatServer - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:олеся:привет все
-2024-11-23 15:41:45 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от олеся: привет все
-2024-11-23 15:41:57 - INFO - org.example.ChatServer - Соединение с пользователем олеся закрыто.
-2024-11-23 15:45:01 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:45:01 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:45:01 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:45:01 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:45:01 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 15:45:01 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:45:05 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:45:24 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: PRIVATE:олеся:привет алиса
-2024-11-23 15:45:24 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Алиса от олеся: привет алиса
-2024-11-23 15:45:33 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:олеся:привет все
-2024-11-23 15:45:33 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:олеся:привет все
-2024-11-23 15:45:33 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:олеся:привет все
-2024-11-23 15:45:33 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от олеся: привет все
-2024-11-23 15:45:55 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
-2024-11-23 15:51:12 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:51:12 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:51:12 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:51:12 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:51:12 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 15:51:12 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:51:18 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:52:00 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: PRIVATE:олеся:привет алиса
-2024-11-23 15:52:00 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Алиса от олеся: привет алиса
-2024-11-23 15:52:11 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю олеся от олеся: привет олеся
-2024-11-23 15:52:35 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:52:50 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:53:02 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:олеся:привет все
-2024-11-23 15:53:02 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:олеся:привет все
-2024-11-23 15:53:02 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:олеся:привет все
-2024-11-23 15:53:02 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от олеся: привет все
-2024-11-23 15:53:29 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
-2024-11-23 15:53:38 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:53:38 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:53:38 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:53:38 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:53:38 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 15:53:38 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:53:42 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:53:46 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
-2024-11-23 15:54:16 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:54:16 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:54:16 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:54:16 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:54:16 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 15:54:16 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:54:31 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:олеся:привет все
-2024-11-23 15:54:31 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:олеся:привет все
-2024-11-23 15:54:31 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:олеся:привет все
-2024-11-23 15:54:31 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от олеся: привет все
-2024-11-23 15:55:27 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:55:27 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:55:27 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 15:55:27 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:55:27 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 15:55:27 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 15:55:38 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
-2024-11-23 15:56:13 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: ла
-2024-11-23 15:56:13 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: ла
-2024-11-23 15:56:13 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: ла
-2024-11-23 15:56:13 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: ла
-2024-11-23 15:56:13 - INFO - org.example.ClientHandler - Новый пользователь подключен: ла
-2024-11-23 15:56:13 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ла, Анна, Алина]
-2024-11-23 15:56:29 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:ла:привет аня
-2024-11-23 15:56:29 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Анна от ла: привет аня
-2024-11-23 15:56:43 - INFO - org.example.ClientHandler - Соединение с пользователем ла закрыто.
-2024-11-23 15:57:40 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 15:57:40 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 15:57:40 - INFO - org.example.ClientHandler - Отправлен список пользователей: [олеся]
-2024-11-23 15:57:45 - INFO - org.example.ClientHandler - Отправлен список пользователей: [олеся]
-2024-11-23 15:57:58 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
-2024-11-23 16:03:21 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 16:03:21 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 16:03:21 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 16:03:21 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 16:03:21 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 16:03:21 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 16:08:02 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:08:02 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:08:02 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:08:02 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:08:02 - INFO - org.example.ClientHandler - Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:08:02 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ОЛЕСЯ, Анна, Алина]
-2024-11-23 16:08:02 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ОЛЕСЯ, Анна, Алина]
-2024-11-23 16:08:11 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ОЛЕСЯ, Анна, Алина]
-2024-11-23 16:08:20 - INFO - org.example.ClientHandler - Соединение с пользователем ОЛЕСЯ закрыто.
-2024-11-23 16:10:54 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:10:54 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:10:54 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:10:54 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:10:54 - INFO - org.example.ClientHandler - Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:10:54 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ОЛЕСЯ, Анна, Алина]
-2024-11-23 16:10:54 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ОЛЕСЯ, Анна, Алина]
-2024-11-23 16:11:32 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:ОЛЕСЯ:привет аня
-2024-11-23 16:11:32 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Анна от ОЛЕСЯ: привет аня
-2024-11-23 16:12:11 - INFO - org.example.ClientHandler - Соединение с пользователем ОЛЕСЯ закрыто.
-2024-11-23 16:13:11 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:13:11 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:13:11 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:13:11 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:13:11 - INFO - org.example.ClientHandler - Новый пользователь подключен: ОЛЕСЯ
-2024-11-23 16:13:11 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ОЛЕСЯ, Анна, Алина]
-2024-11-23 16:13:11 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, ОЛЕСЯ, Анна, Алина]
-2024-11-23 16:13:24 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:ОЛЕСЯ:привет аня
-2024-11-23 16:13:24 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Анна от ОЛЕСЯ: привет аня
-2024-11-23 16:13:43 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:ОЛЕСЯ:привет все
-2024-11-23 16:13:43 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:ОЛЕСЯ:привет все
-2024-11-23 16:13:43 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:ОЛЕСЯ:привет все
-2024-11-23 16:13:43 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от ОЛЕСЯ: привет все
-2024-11-23 16:18:24 - INFO - org.example.ClientHandler - Соединение с пользователем null закрыто.
-2024-11-23 16:19:27 - INFO - org.example.ClientHandler - Соединение с пользователем null закрыто.
-2024-11-23 16:25:11 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 16:25:11 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 16:25:11 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
-2024-11-23 16:25:11 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
-2024-11-23 16:25:11 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
-2024-11-23 16:25:11 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 16:25:11 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
-2024-11-23 16:25:26 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:олеся:привет
-2024-11-23 16:25:26 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Анна от олеся: привет
+2024-11-23 18:45:09 - INFO - org.example.ClientHandler - Соединение с пользователем null закрыто.
+2024-11-23 18:50:37 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
+2024-11-23 18:50:37 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
+2024-11-23 18:50:37 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: Олеся
+2024-11-23 18:50:37 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: Олеся
+2024-11-23 18:50:37 - INFO - org.example.ClientHandler - Новый пользователь подключен: Олеся
+2024-11-23 18:50:37 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
+2024-11-23 18:50:37 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
+2024-11-23 18:50:40 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
+2024-11-23 18:50:51 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: PRIVATE:Олеся:привет алиса
+2024-11-23 18:50:51 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Алиса от Олеся: привет алиса
+2024-11-23 18:50:57 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
+2024-11-23 18:51:10 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Олеся от Олеся: Привет Олеся
+2024-11-23 18:51:13 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, Олеся, Анна, Алина]
+2024-11-23 18:51:27 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:Олеся:Привет аня
+2024-11-23 18:51:27 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Анна от Олеся: Привет аня
+2024-11-23 18:51:35 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:Олеся:хай
+2024-11-23 18:51:35 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:Олеся:хай
+2024-11-23 18:51:35 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:Олеся:хай
+2024-11-23 18:51:35 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от Олеся: хай
+2024-11-23 18:51:35 - INFO - org.example.ClientHandler - Отправлено сообщение всем пользователям от Олеся: хай
+2024-11-23 18:51:41 - INFO - org.example.ClientHandler - Соединение с пользователем Олеся закрыто.
+2024-11-23 18:52:08 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
+2024-11-23 18:52:08 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
+2024-11-23 18:52:08 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
+2024-11-23 18:52:08 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
+2024-11-23 18:52:08 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
+2024-11-23 18:52:08 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
+2024-11-23 18:52:08 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
+2024-11-23 18:52:11 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
+2024-11-23 18:52:20 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: PRIVATE:олеся:привет Анна
+2024-11-23 18:52:20 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Анна от олеся: привет Анна
+2024-11-23 18:52:26 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:олеся:привет всем
+2024-11-23 18:52:26 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:олеся:привет всем
+2024-11-23 18:52:26 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:олеся:привет всем
+2024-11-23 18:52:26 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от олеся: привет всем
+2024-11-23 18:52:26 - INFO - org.example.ClientHandler - Отправлено сообщение всем пользователям от олеся: привет всем
+2024-11-23 18:52:28 - INFO - org.example.ClientHandler - Отправлен список пользователей: [Алиса, олеся, Анна, Алина]
+2024-11-23 18:52:35 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: PRIVATE:олеся:Привет Алиса
+2024-11-23 18:52:35 - INFO - org.example.ClientHandler - Отправлено личное сообщение пользователю Алиса от олеся: Привет Алиса
+2024-11-23 18:52:41 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.

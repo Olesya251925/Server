@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <!-- Конфигурация для записи логов в файл -->
+    <!-- Основной аппендер для записи в файл -->
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>logs/server.log</file>
         <encoder>
@@ -9,12 +9,7 @@
         </encoder>
     </appender>
 
-    <!-- Логгер для INFO уровня и выше -->
-    <root level="info">
-        <appender-ref ref="FILE" />
-    </root>
-
-    <!-- Конфигурация для архивирования файла логов при достижении 10 МБ -->
+    <!-- Аппендер для архивирования логов -->
     <appender name="ARCHIVE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/server.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
@@ -24,5 +19,11 @@
             <pattern>%d{yyyy-MM-dd HH:mm:ss} - %level - %logger{36} - %msg%n</pattern>
         </encoder>
     </appender>
+
+    <!-- Логгер для INFO уровня и выше, который использует оба аппендера -->
+    <root level="info">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="ARCHIVE" />
+    </root>
 
 </configuration>
