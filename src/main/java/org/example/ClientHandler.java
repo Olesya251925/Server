@@ -38,7 +38,6 @@ public class ClientHandler implements Runnable {
                 ChatServer.broadcastNewUser(nickname);
                 logger.info("Новый пользователь подключен: " + nickname);
 
-                // Send the current user list to the new user
                 sendUserList();
 
                 String message;
@@ -120,7 +119,7 @@ public class ClientHandler implements Runnable {
         if (out != null) {
             out.println(message);
         } else if (isPreConnected) {
-            // For pre-connected users, store messages to be sent when they actually connect
+
             System.out.println("Сообщение для " + nickname + ": " + message);
             logger.info("Сообщение для предварительно подключенного пользователя " + nickname + ": " + message);
         }
