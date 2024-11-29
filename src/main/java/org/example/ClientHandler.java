@@ -2,7 +2,6 @@ package org.example;
 
 import java.io.*;
 import java.net.Socket;
-import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,16 +13,19 @@ public class ClientHandler implements Runnable {
     private BufferedReader in;
     private String nickname;
     private boolean isPreConnected;
+    private final MessageHandler messageHandler;
 
     public ClientHandler(Socket socket) {
         this.socket = socket;
         this.isPreConnected = false;
+        this.messageHandler = new MessageHandler(this);
     }
 
     public ClientHandler(Socket socket, String nickname) {
         this.socket = socket;
         this.nickname = nickname;
         this.isPreConnected = true;
+        this.messageHandler = new MessageHandler(this);
     }
 
     @Override
@@ -34,7 +36,7 @@ public class ClientHandler implements Runnable {
                 out = new PrintWriter(socket.getOutputStream(), true);
 
                 nickname = in.readLine();
-                ChatServer.getClientHandlers().put(nickname, this);
+                UserManager.addClientHandler(nickname, this);
                 ChatServer.broadcastNewUser(nickname);
                 logger.info("Новый пользователь подключен: " + nickname);
 
@@ -46,72 +48,25 @@ public class ClientHandler implements Runnable {
                     String messageType = parts[0];
                     String messageContent = parts.length > 1 ? parts[1] : "";
 
-                    // Разделим обработку по типам сообщений
-                    handleMessage(messageType, messageContent);
+                    messageHandler.handleMessage(messageType, messageContent);
                 }
             }
         } catch (IOException e) {
             logger.error("Ошибка при обработке сообщений: ", e);
         } finally {
-            if (!isPreConnected) {
-                try {
-                    socket.close();
-                    logger.info("Соединение с пользователем " + nickname + " закрыто.");
-                } catch (IOException e) {
-                    logger.error("Ошибка при закрытии соединения: ", e);
-                }
-                ChatServer.getClientHandlers().remove(nickname);
+            cleanup();
+        }
+    }
+
+    private void cleanup() {
+        if (!isPreConnected) {
+            try {
+                socket.close();
+                logger.info("Соединение с пользователем " + nickname + " закрыто.");
+            } catch (IOException e) {
+                logger.error("Ошибка при закрытии соединения: ", e);
             }
-        }
-    }
-
-    // Обработка сообщений
-    private void handleMessage(String messageType, String messageContent) {
-        switch (messageType) {
-            case "GET_USERS":
-                sendUserList();
-                break;
-            case "PRIVATE":
-                handlePrivateMessage(messageContent);
-                break;
-            case "BROADCAST":
-                handleBroadcastMessage(messageContent);
-                break;
-            default:
-                logger.warn("Неизвестный тип сообщения: " + messageType);
-        }
-    }
-
-    private void sendUserList() {
-        List<String> users = ChatServer.getConnectedUsers();
-        sendMessage("USERS:" + String.join(",", users));
-        logger.info("Отправлен список пользователей: " + users);
-    }
-
-    // Метод для обработки личных сообщений
-    private void handlePrivateMessage(String messageContent) {
-        String[] parts = messageContent.split(":", 2);
-        if (parts.length == 2) {
-            String recipient = parts[0];
-            String content = parts[1];
-            sendPrivateMessage(recipient, content);
-        }
-    }
-
-    // Метод для обработки сообщений, которые отправляются всем пользователям
-    private void handleBroadcastMessage(String messageContent) {
-        ChatServer.broadcastMessage(nickname, messageContent);
-        logger.info("Отправлено сообщение всем пользователям от " + nickname + ": " + messageContent);
-    }
-
-    private void sendPrivateMessage(String recipientName, String message) {
-        ClientHandler recipient = ChatServer.getClientHandlers().get(recipientName);
-        if (recipient != null) {
-            recipient.sendMessage("PRIVATE:" + nickname + ":" + message);
-            logger.info("Отправлено личное сообщение пользователю " + recipientName + " от " + nickname + ": " + message);
-        } else {
-            sendMessage("SYSTEM:Пользователь " + recipientName + " не найден.");
-            logger.warn("Пользователь " + recipientName + " не найден.");
+            UserManager.removeClientHandler(nickname);
         }
     }
 
@@ -119,7 +74,6 @@ public class ClientHandler implements Runnable {
         if (out != null) {
             out.println(message);
         } else if (isPreConnected) {
-
             System.out.println("Сообщение для " + nickname + ": " + message);
             logger.info("Сообщение для предварительно подключенного пользователя " + nickname + ": " + message);
         }
@@ -127,5 +81,9 @@ public class ClientHandler implements Runnable {
 
     public String getNickname() {
         return nickname;
+    }
+
+    private void sendUserList() {
+        messageHandler.sendUserListToClient(); // Updated method call
     }
 }
