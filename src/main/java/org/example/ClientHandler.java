@@ -84,6 +84,6 @@ public class ClientHandler implements Runnable {
     }
 
     private void sendUserList() {
-        messageHandler.sendUserListToClient(); // Updated method call
+        messageHandler.sendUserListToClient();
     }
 }
