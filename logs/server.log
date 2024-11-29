@@ -301,3 +301,55 @@
 2024-11-29 22:22:19 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, олеся, елена, Анна, Алина]
 2024-11-29 22:22:25 - INFO - org.example.MessageHandler - Отправлено личное сообщение пользователю олеся от елена: привет олеся
 2024-11-29 22:22:32 - INFO - org.example.ClientHandler - Соединение с пользователем олеся закрыто.
+2024-11-29 22:30:44 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: null
+2024-11-29 22:30:44 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: null
+2024-11-29 22:30:44 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: null
+2024-11-29 22:30:44 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: null
+2024-11-29 22:30:44 - INFO - org.example.ClientHandler - Новый пользователь подключен: null
+2024-11-29 22:30:44 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, null, Анна, Алина]
+2024-11-29 22:30:44 - ERROR - org.example.ClientHandler - Ошибка при обработке сообщений: 
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:329)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:372)
+	at java.base/sun.nio.cs.StreamDecoder.lockedRead(StreamDecoder.java:215)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:169)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:188)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:160)
+	at java.base/java.io.BufferedReader.implReadLine(BufferedReader.java:370)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:347)
+	at java.base/java.io.BufferedReader.readLine(BufferedReader.java:436)
+	at org.example.ClientHandler.run(ClientHandler.java:46)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-11-29 22:30:44 - INFO - org.example.ClientHandler - Соединение с пользователем null закрыто.
+2024-11-29 22:30:56 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: елена
+2024-11-29 22:30:56 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: елена
+2024-11-29 22:30:56 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: елена
+2024-11-29 22:30:56 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: елена
+2024-11-29 22:30:56 - INFO - org.example.ClientHandler - Новый пользователь подключен: елена
+2024-11-29 22:30:56 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, елена, Анна, Алина]
+2024-11-29 22:31:03 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
+2024-11-29 22:31:03 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
+2024-11-29 22:31:03 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:SYSTEM:Новый пользователь подключен: олеся
+2024-11-29 22:31:03 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от SYSTEM: Новый пользователь подключен: олеся
+2024-11-29 22:31:03 - INFO - org.example.ClientHandler - Новый пользователь подключен: олеся
+2024-11-29 22:31:03 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, олеся, елена, Анна, Алина]
+2024-11-29 22:31:10 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, олеся, елена, Анна, Алина]
+2024-11-29 22:31:10 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, олеся, елена, Анна, Алина]
+2024-11-29 22:31:17 - INFO - org.example.MessageHandler - Отправлено личное сообщение пользователю елена от олеся: привет ленка
+2024-11-29 22:31:26 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, олеся, елена, Анна, Алина]
+2024-11-29 22:31:26 - INFO - org.example.MessageHandler - Отправлен список пользователей: [Алиса, олеся, елена, Анна, Алина]
+2024-11-29 22:31:48 - INFO - org.example.MessageHandler - Отправлено личное сообщение пользователю олеся от елена: привет олеська
+2024-11-29 22:31:59 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:елена:привет все друзья
+2024-11-29 22:31:59 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:елена:привет все друзья
+2024-11-29 22:31:59 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:елена:привет все друзья
+2024-11-29 22:31:59 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от елена: привет все друзья
+2024-11-29 22:31:59 - INFO - org.example.MessageHandler - Отправлено сообщение всем пользователям от елена: привет все друзья
+2024-11-29 22:32:13 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алиса: BROADCAST:олеся:привет все друзья
+2024-11-29 22:32:13 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Анна: BROADCAST:олеся:привет все друзья
+2024-11-29 22:32:13 - INFO - org.example.ClientHandler - Сообщение для предварительно подключенного пользователя Алина: BROADCAST:олеся:привет все друзья
+2024-11-29 22:32:13 - INFO - org.example.ChatServer - Отправлено сообщение всем пользователям от олеся: привет все друзья
+2024-11-29 22:32:13 - INFO - org.example.MessageHandler - Отправлено сообщение всем пользователям от олеся: привет все друзья
