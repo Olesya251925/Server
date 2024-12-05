@@ -43,10 +43,11 @@ public class ClientHandler implements Runnable {
                 sendUserList();
 
                 String message;
+                // Читаем сообщения от клиента
                 while ((message = in.readLine()) != null) {
-                    String[] parts = message.split(":", 2);
-                    String messageType = parts[0];
-                    String messageContent = parts.length > 1 ? parts[1] : "";
+                    String[] parts = message.split(":", 2); // Разделяем сообщение на тип и содержимое
+                    String messageType = parts[0];  // Тип сообщения
+                    String messageContent = parts.length > 1 ? parts[1] : ""; // Содержимое сообщения
 
                     messageHandler.handleMessage(messageType, messageContent);
                 }
@@ -58,6 +59,7 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    // Метод для очистки ресурсов
     private void cleanup() {
         if (!isPreConnected) {
             try {
@@ -70,6 +72,7 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    // Метод для отправки сообщения клиенту
     public void sendMessage(String message) {
         if (out != null) {
             out.println(message);
@@ -79,11 +82,13 @@ public class ClientHandler implements Runnable {
         }
     }
 
+    // Метод для получения никнейма пользователя
     public String getNickname() {
         return nickname;
     }
 
+    // Метод для отправки списка пользователей
     private void sendUserList() {
-        messageHandler.sendUserListToClient();
+        messageHandler.sendUserListToClient(); // Отправляем список подключенных пользователей через обработчик сообщений
     }
 }

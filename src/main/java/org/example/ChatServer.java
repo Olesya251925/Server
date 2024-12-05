@@ -40,12 +40,13 @@ public class ChatServer {
         initializePreConnectedClients();
 
         while (true) {
-            Socket clientSocket = serverSocket.accept();
-            ClientHandler clientHandler = new ClientHandler(clientSocket);
-            new Thread(clientHandler).start();
+            Socket clientSocket = serverSocket.accept(); // Принимаем новое подключение клиента
+            ClientHandler clientHandler = new ClientHandler(clientSocket);  // Создаем обработчик для клиента
+            new Thread(clientHandler).start(); // Запускаем новый поток для обработки клиента
         }
     }
 
+    // Метод для инициализации предварительно подключенных клиентов
     private static void initializePreConnectedClients() {
         System.out.println("Подключенные пользователи:");
         for (String clientName : preConnectedClients) {
@@ -57,12 +58,14 @@ public class ChatServer {
         }
     }
 
+    // Метод для получения списка подключенных пользователей
     public static List<String> getConnectedUsers() {
-        return new ArrayList<>(UserManager.getClientHandlers().keySet());
+        return new ArrayList<>(UserManager.getClientHandlers().keySet()); // Возвращаем список ключей (имён пользователей)
     }
 
+    // Метод для получения всех обработчиков клиентов
     public static Map<String, ClientHandler> getClientHandlers() {
-        return UserManager.getClientHandlers();
+        return UserManager.getClientHandlers();  // Возвращаем карту обработчиков клиентов
     }
 
     public static void broadcastNewUser(String nickname) {
@@ -71,6 +74,7 @@ public class ChatServer {
     }
 
     public static void broadcastMessage(String sender, String message) {
+        // Проходим по всем обработчикам клиентов и отправляем сообщение
         for (ClientHandler handler : UserManager.getClientHandlers().values()) {
             if (!handler.getNickname().equals(sender)) {
                 handler.sendMessage("BROADCAST:" + sender + ":" + message);
